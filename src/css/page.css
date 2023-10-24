@@ -1,0 +1,12 @@
+.page {
+   width: 100%;
+   min-height: 100%;
+   max-width: 1280px;
+   margin: 0 auto;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: start;
+   scroll-behavior: smooth;
+}

@@ -1,0 +1,73 @@
+.errorpage {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100vh;
+   padding: 246px 0 60px 0;
+   box-sizing: border-box;
+   text-align: center;
+ }
+ 
+ .errorpage__container {
+   width: 100%;
+ }
+ 
+ .errorpage__title {
+   color: #FFF;
+   margin: 0;
+   font-size: 140px;
+   line-height: 169px;
+ }
+ 
+ .errorpage__text {
+   color: #FFF;
+   margin: 5px 0 0;
+   font-size: 16px;
+   line-height: 19px;
+ }
+ 
+ .errorpage__link {
+   margin-top: 184px;
+   color: #4285F4;
+   font-size: 14px;
+   cursor: pointer;
+   line-height: 17px;
+   text-decoration: none;
+   transition: all 250ms ease-out;
+ }
+ 
+ .errorpage__link:hover {
+   opacity: .7;
+ }
+ 
+ @media screen and (max-width: 800px) {
+   .errorpage {
+     padding: 408px 0 222px 0;
+   }
+ }
+ 
+ @media screen and (max-width: 450px) {
+   .errorpage {
+     padding: 329px 0 30px 0;
+   }
+ 
+   .errorpage__link {
+     margin-top: 284px;
+   }
+ 
+   .errorpage__title {
+     font-size: 80px;
+     line-height: normal;
+   }
+ 
+   .errorpage__text {
+     margin-top: 10px;
+     font-size: 12px;
+     line-height: normal;
+   }
+ 
+   .errorpage__link {
+     font-size: 12px;
+     line-height: normal;
+   }
+ }
