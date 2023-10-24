@@ -6,14 +6,14 @@ function Login() {
    return (
         <section className="login">
          <div className="login__container">
-            <Link to="/"><img className="login__logo" src={Logo}></img></Link>
+            <Link to="/"><img className="login__logo" alt="Логотип" src={Logo}></img></Link>
             <h2 className="login__title">Рады видеть!</h2>
             <form className="login__form">
                <label className="login__label">E-mail</label>
-               <input className="login__input" type="email"></input>
+               <input className="login__input" type="email" required></input>
 
                <label className="login__label">Пароль</label>
-               <input className="login__input" type="password"></input>
+               <input className="login__input" type="password" required ></input>
 
                <button className="login__button">Войти</button>
             </form>

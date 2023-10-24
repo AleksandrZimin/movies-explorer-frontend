@@ -6,17 +6,17 @@ function Register() {
    return (
         <section className="register">
          <div className="register__container">
-            <Link to="/"><img className="register__logo" src={Logo}></img></Link>
+            <Link to="/"><img className="register__logo" alt="Лого" src={Logo}></img></Link>
             <h2 className="register__title">Добро пожаловать!</h2>
             <form className="register__form">
                <label className="register__label">Имя</label>
-               <input className="register__input" type="text"></input>
+               <input className="register__input" type="text" required ></input>
 
                <label className="register__label">E-mail</label>
-               <input className="register__input" type="email"></input>
+               <input className="register__input" type="email" required ></input>
 
                <label className="register__label">Пароль</label>
-               <input className="register__input" type="password"></input>
+               <input className="register__input" type="password" required ></input>
                <p className="register__error display-none">Что-то пошло не так...</p>
 
                <button className="register__button">Зарегистрироваться</button>
