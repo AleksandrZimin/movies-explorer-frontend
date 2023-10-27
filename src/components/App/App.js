@@ -23,7 +23,7 @@ function App() {
             path="/" 
             element={
               <>
-                <Header />
+                <Header isAuth={true} />
                 <Main /> 
                 <Footer />
               </>

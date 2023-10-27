@@ -4,7 +4,6 @@
    border-radius: 10px;
    background: #272727;
    margin: 20px 40px 0 40px;
-   /* padding: 20px 40px 0 40px; */
    box-sizing: border-box;
 }
 
@@ -12,8 +11,6 @@
    max-width: 730px;
    margin: auto;
    padding: 160px 0 151px 0;
-   color: #FFF;
-   text-align: center;
    font-size: 50px;
    font-style: normal;
    font-weight: 400;
@@ -30,7 +27,7 @@
    }
 
    .promo__text {
-      max-width: 680px;
+    max-width: 680px;
     font-size: 40px;
     line-height: 52px;
     padding: 350px 24px 314px 24px;

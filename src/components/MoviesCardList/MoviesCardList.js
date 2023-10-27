@@ -1,18 +1,22 @@
-import React, { useState } from "react";
-import { Routes, Link, Route } from "react-router-dom";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import MoviesCard from "../MoviesCard/MoviesCard.js";
 
-function MoviesCardList() {
+function MoviesCardList({films}) {
+
+    const {pathname} = useLocation();
+    const isSavePage = pathname === "/saved-movies";
+
    return (
         <div className="moviescardlist">
             <div className="moviescardlist__items">
-               <MoviesCard />
-               <MoviesCard />
-               <MoviesCard />
+               <MoviesCard isSaved/>
+               <MoviesCard isSaved/>
+               <MoviesCard isSaved/>
                <MoviesCard />
                <MoviesCard />
             </div>
-            <button className="moviescardlist__button">Ещё</button>
+            {!isSavePage && <button className="moviescardlist__button">Ещё</button>}
         </div>
     );
 }

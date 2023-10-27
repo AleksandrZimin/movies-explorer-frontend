@@ -49,10 +49,11 @@
    }
 
    .moviescardlist__items {
-      grid-template-columns: repeat(2, 339px);
-      grid-auto-rows: minmax(201px, auto);
+      grid-template-columns: repeat(2, 1fr);
       gap: 47px 30px;
       padding-bottom: 0;
+      align-items: center;
+      justify-content: center;
    }
 
    .moviescard__info {

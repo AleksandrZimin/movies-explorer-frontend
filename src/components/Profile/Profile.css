@@ -3,8 +3,9 @@
    flex-direction: column;
    justify-content: start;
    align-items: center;
-   height: calc(100vh - 74px);
+   height: 100%;
    box-sizing: border-box;
+   padding-bottom: 70px;
  }
  
  .profile__form {
@@ -12,7 +13,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 74px 0 220px 0;
+   padding: 74px 0 50px 0;
    max-width: 410px;
    box-sizing: border-box;
  }
@@ -49,14 +50,14 @@
  .profile__inputs:last-of-type {
    border-bottom: none;
    padding: 16px 0 0 0;
+   margin-bottom: 189px;
  }
  
- .profile__input_item {
+ .profile__input-item {
    width: 100%;
    margin: 0;
    padding: 0;
    border: none;
-   outline: none;
    text-align: end;
    font-size: 11px;
    line-height: normal;
@@ -72,6 +73,7 @@
    margin: 0 0 16px 0;
    border: none;
    background-color: transparent;
+ 
    color: #FFF;
    font-size: 13px;
    line-height: 16px;
@@ -111,10 +113,45 @@
   align-items: center;
   justify-content: center;
  }
+
+ .profile__button-save {
+  width: 100%;
+  max-width: 410px;
+  height: 45px;
+  border-radius: 3px;
+  margin-top: 20px;
+  background: #3456F3;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 250ms ease-out;
+ }
+
+ .profile__button-save:hover {
+  opacity: .8;
+ }
+
+ .profile__button-save:disabled {
+  background: #F8F8F8;
+  color: #C2C2C2;
+ }
+
+  .profile__error {
+    color: #FF004C;
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .profile__error_hidden {
+    display: none;
+  } 
  
  @media all and (max-width: 800px) {
    .profile__form {
-     padding: 236px 0 210px 0;
+     padding: 236px 0 50px 0;
    }
  
    .profile__welcome {
@@ -132,7 +169,7 @@
  
  @media all and (max-width: 500px) {
    .profile__form {
-     padding: 70px 30px 0 30px;
+     padding: 70px 30px 50px 30px;
    }
  
    .profile__welcome {
@@ -142,10 +179,6 @@
      font-style: normal;
      font-weight: 500;
      line-height: normal;
-   }
-
-   .profile__form {
-    padding-bottom: 379px;
    }
  
    .profile__button {

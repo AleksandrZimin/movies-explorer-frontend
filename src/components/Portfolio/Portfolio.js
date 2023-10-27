@@ -5,9 +5,11 @@ function Portfolio() {
    return (
         <div className="portfolio">
           <h2 className="portfolio__name">Портфолио</h2>
-          <p className="portfolio__link">Статичный сайт</p>
-          <p className="portfolio__link">Адаптивный сайт</p>
-          <p className="portfolio__link">Одностраничное приложение</p>
+          <div className="portfolio__links">
+            <a className="portfolio__link" href="https://aleksandrzimin.github.io/how-to-learn/" target="_blank">Статичный сайт</a>
+            <a className="portfolio__link" href="https://aleksandrzimin.github.io/russian-travel/" target="_blank">Адаптивный сайт</a>
+            <a className="portfolio__link" href="https://zimin.nomoredomainsrocks.ru/" target="_blank">Одностраничное приложение</a>
+          </div>
         </div>
     );
 }

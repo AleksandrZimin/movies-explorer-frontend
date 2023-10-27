@@ -11,13 +11,11 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList.js';
 
 function Movies() {
   return (
-    <div className="Movies">
-      <div className="page">
+    <main className="Movies">
         <SearchForm />
         <FilterCheckbox />
         <MoviesCardList />
-      </div>
-    </div>
+    </main>
   );
 }
 

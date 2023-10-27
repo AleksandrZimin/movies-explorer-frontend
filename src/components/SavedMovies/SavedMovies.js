@@ -10,13 +10,11 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox.js';
 
 function SavedMovies() {
   return (
-    <div className="SavedMovies">
-      <div className="page">
+    <main className="SavedMovies">
         <SearchForm />
         <FilterCheckbox />
         <MoviesCardList />
-      </div>
-    </div>
+    </main>
   );
 }
 

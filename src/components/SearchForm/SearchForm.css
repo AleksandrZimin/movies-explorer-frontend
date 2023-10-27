@@ -16,12 +16,11 @@
    background: #2F2F2F;
    border: none;
    margin-right: 10px;
-
+   
    color: #8B8B8B;
    font-size: 14px;
    line-height: 18px; 
    padding-left: 20px;
-
  }
 
  .searchform-input::placeholder {
@@ -54,5 +53,11 @@
  @media screen and (max-width: 800px) {
   .searchform { 
     padding: 80px 30px 41px 30px;
+ }
+}
+
+@media screen and (max-width: 540px) {
+  .searchform { 
+    padding: 80px 14px 46px 14px;
  }
 }

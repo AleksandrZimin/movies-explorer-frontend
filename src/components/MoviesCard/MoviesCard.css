@@ -1,53 +1,23 @@
 .moviescard {
-   width: 360px;
 }
 
 .moviescard__photo {
    position: relative;
-   width: 360px;
-   height: 201px;
+   width: 100%;
    background-image: url(../../images/template-photo.png);
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
    margin-bottom: 14px;
    cursor: pointer;
+   aspect-ratio: 16/9;
 }
 
 .moviescard__photo:hover .moviescard__button {
    opacity: .8;
 }
 
-.moviescard__button {
-   content: "123456";
-   position: absolute;
-   top: 14px;
-   right: 14px;
-   width: 72px;
-   height: 21px;
-   border-radius: 30px;
-   background: #313131;
-   border: none;
-   cursor: pointer;
-   color: #FFF;
-   opacity: 0;
-   text-align: center;
-   font-size: 10px;
-   line-height: 9px; /* 90% */
-   transition: all 250ms ease-out;
-   
-}
 
-.moviescard__icon {
-   position: absolute;
-   width: 21px;
-   height: 21px;
-   top: 14px;
-   right: 14px;
-   border-radius: 50%;
-   background-image: url(../../images/save3.png);
-   transition: all 250ms ease-out;
-}
 
 .moviescard__info {
    display: flex;
@@ -83,37 +53,61 @@
    line-height: 10px; /* 90.909% */
 }
 
-.moviescard__delete {
+.moviescard__button {
    position: absolute;
-   width: 21px;
-   height: 21px;
    top: 14px;
    right: 14px;
+   opacity: 0;
+   border: none;
+   cursor: pointer;
+   transition: all 250ms ease-out;
+   border-radius: 30px;
+   background: #313131;
+
+   color: #FFF;
+   width: 72px;
+   height: 21px;
+   text-align: center;
+   font-size: 10px;
+   line-height: 15px;
+}
+
+.moviescard__button:hover {
+   opacity: .8;
+}
+
+.moviescard__photo:hover  .moviescard__button {
+   opacity: 1;
+   cursor: pointer;
+}
+
+.moviescard__button_state_save {
+   width: 21px;
+   height: 21px;
+   border-radius: 50%;
+   opacity: 1;
+   background-image: url(../../images/save3.png);
+}
+
+.moviescard__button_state_delete {
+   width: 21px;
+   height: 21px;
    border-radius: 50%;
    background-color: #313131;
    background-image: url(../../images/d3.png);
    background-position: center;
    background-repeat: no-repeat;
-   background-size: contain;
-   opacity: 0;
-   border: none;
-   transition: all 250ms ease-out;
-
+   background-size: contain;  
 }
 
-.moviescard__photo:hover  .moviescard__delete {
-   opacity: 1;
-   cursor: pointer;
-}
+
 
 @media screen and (max-width: 1180px) {
    .moviescard {
-     width: 339px;
+      width: 100%;
    }
 
    .moviescard__photo {
-      width: 339px;
-      height: 190px;
       margin-bottom: 25px;
    }
 
@@ -125,14 +119,12 @@
 
 @media screen and (max-width: 750px) {
    .moviescard {
-     width: 300px;
+     width: 100%;
      padding: 0;
 
    }
 
    .moviescard__photo {
-      width: 300px;
-      height: 168px;
       margin-bottom: 16px;
    }
 
