@@ -110,7 +110,7 @@
    opacity: 0.8;
 }
 
-.header__burger {
+/* .header__burger {
    display: none;
    cursor: pointer;
    background-color: #202020;
@@ -120,7 +120,7 @@
 
 .header__burger:hover {
    opacity: .7;
-}
+} */
 
 @media screen and (max-width: 800px) {
    .header {
@@ -132,13 +132,6 @@
    }
 
    .header__link {
-      display: none;
-   }
-
-   .header__menu {
-   }
-
-   .header__auth {
       display: none;
    }
 

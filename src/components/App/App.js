@@ -43,7 +43,7 @@ function App() {
             path="/saved-movies" 
             element={
               <>
-                <Header />
+                <Header isAuth={true} />
                 <SavedMovies /> 
                 <Footer />
               </>

@@ -49,6 +49,7 @@
    background: #2F2F2F;
    border: none;
    color: #FFF;
+   font-family: 'Inter', ‘Arial’, sans-serif;
    box-sizing: border-box;
    font-size: 13px;
    font-weight: 500;
@@ -68,6 +69,7 @@
    cursor: pointer;
    color: #FFF;
    text-align: center;
+   font-family: 'Inter', ‘Arial’, sans-serif;
    font-size: 14px;
    font-weight: 500;
    transition: all 250ms ease-out;

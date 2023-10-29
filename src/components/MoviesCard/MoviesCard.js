@@ -9,7 +9,7 @@ function MoviesCard({isSaved}) {
    return (
 
          <div className="moviescard">
-            <div className="moviescard__photo">
+            <div className="moviescard__photo" alt="Обложка фильма">
                <button className={`moviescard__button ${
                   isSaved && !isSavePage 
                   ? 'moviescard__button_state_save' 
