@@ -1,15 +1,21 @@
-import React, { useState } from "react";
-import { Routes, Link, Route } from "react-router-dom";
+import React from "react";
 
-function FilterCheckbox({ email, handleLogout }) {
-   return (
-        <div className="filtercheckbox">
-            <label class="checkbox" for="checkbox">
-               <input class="checkbox__input" type="checkbox" id="checkbox"/>
-               <span class="checkbox__inner">Короткометражки</span>
-            </label>
-        </div>
-    );
+function FilterCheckbox({ value, handler }) {
+  return (
+    <div className="filtercheckbox">
+      <label className="checkbox" htmlFor="checkbox">
+        <input
+          className="checkbox__input"
+          type="checkbox"
+          id="checkbox"
+          onChange={handler}
+          checked={value}
+        />
+        <span className="checkbox__inner">Короткометражки</span>
+      </label>
+    </div>
+  );
 }
 
 export default FilterCheckbox;
+

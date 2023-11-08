@@ -1,63 +1,66 @@
 .searchform {
-   width: 100%; 
-   padding: 80px 70px 29px 70px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   box-sizing: border-box;
+  width: 100%;
+  padding: 80px 70px 29px 70px;
+
+  box-sizing: border-box;
 }
 
 .searchform-input {
-   box-sizing: border-box;
-   width: 100%;
-   height: 50px;
-   max-width: 1086px;
-   border-radius: 8px;
-   background: #2F2F2F;
-   border: none;
-   margin-right: 10px;
-   font-family: 'Inter', ‘Arial’, sans-serif;
-   color: #8B8B8B;
-   font-size: 14px;
-   line-height: 18px; 
-   padding-left: 20px;
- }
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  max-width: 1086px;
+  border-radius: 8px;
+  background: #2f2f2f;
+  border: none;
+  margin-right: 10px;
+  font-family: "Inter", ‘Arial’, sans-serif;
+  color: #8b8b8b;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 20px;
+}
 
- .searchform-input::placeholder {
-   color: #8B8B8B;
-   font-size: 14px;
-   font-weight: 400;
-   line-height: 18px; 
+.searchform__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- }
+.searchform-input::placeholder {
+  color: #8b8b8b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
 
- .searchform-input:focus {
-   outline-width: 0;
- }
+.searchform-input:focus {
+  outline-width: 0;
+}
 
- .searchform-button {
-   width: 44px;
-   height: 44px;
-   background-image: url("../../images/find-3.png");
-   border: none;
-   border-radius: 7px;
-   box-sizing: border-box;
-   cursor: pointer;
-   transition: all 250ms ease-out;
- }
+.searchform-button {
+  width: 44px;
+  height: 44px;
+  background-image: url("../../images/find-3.png");
+  border: none;
+  border-radius: 7px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 250ms ease-out;
+}
 
- .searchform-button:hover {
-   opacity: 0.8;
- }
+.searchform-button:hover {
+  opacity: 0.8;
+}
 
- @media screen and (max-width: 800px) {
-  .searchform { 
+@media screen and (max-width: 800px) {
+  .searchform {
     padding: 80px 30px 41px 30px;
- }
+  }
 }
 
 @media screen and (max-width: 540px) {
-  .searchform { 
+  .searchform {
     padding: 80px 14px 46px 14px;
- }
+  }
 }

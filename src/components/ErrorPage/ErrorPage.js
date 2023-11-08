@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
-
   const navigate = useNavigate();
 
   return (
@@ -10,9 +9,12 @@ const ErrorPage = () => {
         <h1 className="errorpage__title">404</h1>
         <p className="errorpage__text">Страница не найдена</p>
       </div>
-      <a className="errorpage__link" onClick={() => navigate(-1)}>Назад</a>
+      <a className="errorpage__link" onClick={() => navigate(-1)}>
+        Назад
+      </a>
     </div>
   );
 };
 
 export default ErrorPage;
+
