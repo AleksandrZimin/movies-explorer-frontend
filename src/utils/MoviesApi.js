@@ -20,4 +20,4 @@ class MoviesApi {
   }
 }
 
-export default new MoviesApi("https://api.aleksandr.nomoredomainsrocks.ru");
+export default new MoviesApi("https://api.nomoreparties.co/beatfilm-movies");
