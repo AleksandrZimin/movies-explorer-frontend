@@ -90,6 +90,4 @@ class MainApi {
   }
 }
 
-export default new MainApi("http://localhost:3000");
-
-// https://api.aleksandr.nomoredomainsrocks.ru
+export default new MainApi("https://api.aleksandr.nomoredomainsrocks.ru");
