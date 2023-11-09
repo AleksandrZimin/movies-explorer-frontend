@@ -2,29 +2,25 @@ import React, { useContext, useState } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import MainApi from "../../utils/MainApi";
 import { errorMessages } from "../../utils/Constant";
+import { useFormWithValidation } from "../../hooks/useForm";
 
 function Profile({ handleLogout, setUser }) {
   const { user } = useContext(CurrentUserContext);
 
-  const [name, setName] = useState(user.name);
-  const [email, setEmail] = useState(user.email);
   const [editing, setEditing] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const isButtonDisable = name === user.name && email === user.email;
+  const { values, handleChange, errors, isValid, resetForm } =
+    useFormWithValidation({ name: user.name, email: user.email });
 
-  const handleInputName = ({ target }) => {
-    setName(target.value);
-  };
+  const isButtonDisable =
+    (values.name === user.name && values.email === user.email) || !isValid;
 
-  const handleInputEmail = ({ target }) => {
-    setEmail(target.value);
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrorMessage("");
-    MainApi.editProfile({ name, email })
+    MainApi.editProfile({ name: values.name, email:values.email })
       .then((res) => {
         setUser(res);
         setEditing(false);
@@ -50,11 +46,16 @@ function Profile({ handleLogout, setUser }) {
           <p className="profile__text">Имя</p>
           <div className="profile__input">
             <input
-              className="profile__input-item"
-              value={name}
+              className={`profile__input-item ${
+                errors.name ? "profile__input_error" : ""
+              }`}
+              value={values.name}
               placeholder="Введите имя"
-              onChange={handleInputName}
+              onChange={(event) => handleChange(event)}
               disabled={!editing}
+              name="name"
+              minLength={2}
+              maxLength={30}
             />
           </div>
         </div>
@@ -62,15 +63,21 @@ function Profile({ handleLogout, setUser }) {
           <p className="profile__text">E-mail</p>
           <div className="profile__input">
             <input
-              className="profile__input-item"
-              value={email}
+              type="email"
+              className={`profile__input-item ${
+                errors.email ? "profile__input_error" : ""
+              }`}
+              value={values.email}
               placeholder="Введите email"
-              onChange={handleInputEmail}
+              onChange={(event) => handleChange(event)}
               disabled={!editing}
+              name="email"
             />
           </div>
         </div>
-        {errorMessage && <p className="profile__error">{errorMessage}</p>}
+        <p className="profile__error">
+          {errors.name || errors.email || errorMessage}
+        </p>
         {editing && (
           <button className="profile__button-save" disabled={isButtonDisable}>
             Сохранить

@@ -145,6 +145,11 @@
   margin: 0;
 }
 
+.profile__input_error {
+  color: #ee3465;
+  /* outline: 1px solid #ee3465; */
+}
+
 .profile__error_hidden {
   display: none;
 }

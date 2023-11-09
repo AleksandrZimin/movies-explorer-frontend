@@ -57,7 +57,7 @@
 
 .register__input_error {
   color: #ee3465;
-  outline: 1px solid #ee3465;
+  /* outline: 1px solid #ee3465; */
 }
 
 .register__button {

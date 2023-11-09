@@ -20,5 +20,6 @@ class MoviesApi {
   }
 }
 
-export default new MoviesApi("https://api.nomoreparties.co/beatfilm-movies");
+export default new MoviesApi("http://localhost:3000");
 
+// https://api.nomoreparties.co/beatfilm-movies
