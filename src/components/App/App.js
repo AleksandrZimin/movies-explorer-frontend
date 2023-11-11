@@ -21,6 +21,7 @@ function App() {
   const [userLogin, setUserLogin] = useState(false);
   const [userMovies, setUserMovies] = useState([]);
   const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -31,13 +32,18 @@ function App() {
             setUserLogin(true);
           }
         })
-        .catch((err) => handleLogout());
+        .catch((err) => handleLogout())
+        .finally(() => {
+          setIsLoading(false)
+        })
+    } else {
+      setIsLoading(false)
     }
+    
   }, []);
 
   useEffect(() => {
     if (userLogin) {
-      navigate("/movies");
       Promise.all([MainApi.getUser(), MainApi.getMovies()])
         .then(([user, films]) => {
           setUserMovies(films);
@@ -72,6 +78,7 @@ function App() {
       .then((res) => {
         localStorage.setItem("token", res.token);
         setUserLogin(true);
+        navigate("/movies")
       })
       .catch((err) => {
         switch (err.status) {
@@ -88,11 +95,12 @@ function App() {
   const handleLogout = () => {
     localStorage.clear();
     setUserLogin(false);
-    navigate("/signin");
+    navigate("/");
   };
 
   return (
     <div className="App">
+      { !isLoading && 
       <div className="page">
         <CurrentUserContext.Provider value={{ user }}>
           <Header isAuth={userLogin} />
@@ -151,7 +159,9 @@ function App() {
           <Footer />
         </CurrentUserContext.Provider>
       </div>
+      }
     </div>
+    
   );
 }
 

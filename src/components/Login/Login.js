@@ -1,15 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import isEmail from "validator/lib/isEmail";
 import Logo from "../../images/logo.png";
 import { useFormWithValidation } from "../../hooks/useForm";
 
 function Login({ handleLogin, errorMessage }) {
-  const { values, handleChange, errors, isValid, resetForm } =
-    useFormWithValidation({ email: "", password: "" });
+  const {
+    values,
+    handleChange,
+    errors,
+    isValid,
+    resetForm,
+    setErrors,
+    setIsValid,
+  } = useFormWithValidation({ email: "", password: "" });
 
   const handleSubmit = (event) => {
     event.preventDefault();
     handleLogin(values.password, values.email);
+  };
+
+  const handleInputEmail = (event) => {
+    handleChange(event);
+    if (!isEmail(event.target.value)) {
+      setErrors({ ...errors, email: "Невалидный Email" });
+      setIsValid(false);
+    }
   };
 
   return (
@@ -29,7 +45,7 @@ function Login({ handleLogin, errorMessage }) {
             placeholder="Введите email"
             value={values.email}
             name="email"
-            onChange={(event) => handleChange(event)}
+            onChange={handleInputEmail}
             required
           ></input>
           <p className="login__error">{errors.email}</p>
@@ -50,7 +66,7 @@ function Login({ handleLogin, errorMessage }) {
           ></input>
           <p className="login__error">{errors.password || errorMessage}</p>
 
-          <button className="login__button" disabled={!isValid}>
+          <button className="login__button" disabled={!isValid || errors.email}>
             Войти
           </button>
         </form>

@@ -17,6 +17,11 @@ function MoviesCardList({ films, isLoading, savedMovies, setSavedMovies }) {
     };
   }, []);
 
+  useEffect(() => {
+    changeLength()
+
+  }, [films])
+
   const changeLength = () => {
     if (window.innerWidth > 1180) {
       setCardLength(12);
@@ -78,7 +83,7 @@ function MoviesCardList({ films, isLoading, savedMovies, setSavedMovies }) {
       ) : (
         <div className="moviescardlist">
           <div className="moviescardlist__items">
-            {films.slice(0, cardLength).map((film) => (
+            {(isSavePage ? films : films.slice(0, cardLength)).map((film) => (
               <MoviesCard
                 film={film}
                 key={film.movieId}

@@ -139,10 +139,13 @@
   color: #c2c2c2;
 }
 
-.profile__error {
-  color: #ff004c;
+.profile__message {
   font-size: 11px;
   margin: 0;
+}
+
+.profile__message_error {
+  color: #ff004c;
 }
 
 .profile__input_error {
@@ -211,3 +214,4 @@
     padding-bottom: 40px;
   }
 }
+

@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import isEmail from "validator/lib/isEmail";
 import Logo from "../../images/logo.png";
 import { useFormWithValidation } from "../../hooks/useForm";
 
 function Register({ handleRegister, errorMessage }) {
-  const { values, handleChange, errors, isValid, resetForm } =
-    useFormWithValidation({ name: "", email: "", password: "" });
+  const {
+    values,
+    handleChange,
+    errors,
+    isValid,
+    resetForm,
+    setErrors,
+    setIsValid,
+  } = useFormWithValidation({ name: "", email: "", password: "" });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,6 +36,14 @@ function Register({ handleRegister, errorMessage }) {
     //         break;
     //     }
     //   });
+  };
+
+  const handleInputEmail = (event) => {
+    handleChange(event);
+    if (!isEmail(event.target.value)) {
+      setErrors({ ...errors, email: "Невалидный Email" });
+      setIsValid(false);
+    }
   };
 
   return (
@@ -62,7 +78,7 @@ function Register({ handleRegister, errorMessage }) {
             type="email"
             placeholder="Введите email"
             value={values.email}
-            onChange={(event) => handleChange(event)}
+            onChange={handleInputEmail}
             required
             name="email"
           ></input>
@@ -84,7 +100,10 @@ function Register({ handleRegister, errorMessage }) {
           ></input>
           <p className="register__error">{errors.password || errorMessage}</p>
 
-          <button className="register__button" disabled={!isValid}>
+          <button
+            className="register__button"
+            disabled={!isValid || errors.email}
+          >
             Зарегистрироваться
           </button>
         </form>

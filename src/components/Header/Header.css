@@ -49,7 +49,7 @@
   opacity: 0.7;
 }
 
-.header__link:active {
+.header__link.active {
   font-weight: 500;
 }
 

@@ -7,7 +7,6 @@ import FilmDTO from "../../utils/FilmDTO.js";
 
 function Movies({ userMovies, setUserMovies }) {
   const [isLoading, setIsLoading] = useState(false);
-  const [moviesList, setMoviesList] = useState([]);
   const [result, setResult] = useState([]);
   const [message, setMessage] = useState("");
 
@@ -24,6 +23,7 @@ function Movies({ userMovies, setUserMovies }) {
       setMessage("Нужно ввести ключевое слово");
       return;
     }
+    const moviesList = JSON.parse(sessionStorage.getItem("films")) ?? []
 
     if (moviesList.length) {
       const filteredMovies = moviesList.filter((film) => {
@@ -47,7 +47,8 @@ function Movies({ userMovies, setUserMovies }) {
       MoviesApi.getMovies()
         .then((res) => {
           const movies = res.map((film) => new FilmDTO(film));
-          setMoviesList(movies);
+          // setMoviesList(movies);
+          sessionStorage.setItem("films", JSON.stringify(movies))
           const filteredMovies = movies.filter((film) => {
             if (check) {
               return (
