@@ -12,7 +12,6 @@
   padding: 159px 90px 90px 90px;
   box-sizing: border-box;
   z-index: 2;
- 
 }
 
 .navigation--visible {
@@ -39,11 +38,11 @@
 }
 
 .navigation__item:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .navigation__link {
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -52,11 +51,11 @@
 }
 
 .navigation__link:hover {
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid #fff;
 }
 
 .navigation__link.active {
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid #fff;
 }
 
 .navigation__item:last-child {
@@ -65,11 +64,11 @@
 
 .navigation__button {
   width: 100px;
-  height: 32px;  
+  height: 32px;
   border-radius: 20px;
-  background: #313131;  
+  background: #313131;
   border: none;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   text-align: center;
   font-size: 14px;
@@ -79,11 +78,8 @@
 }
 
 .navigation__button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
-
-
-
 
 @media screen and (max-width: 540px) {
   .navigation {
@@ -92,8 +88,8 @@
   }
 
   .navigation__close {
-     top: 13.44px;
-     right: 13.44px;
+    top: 13.44px;
+    right: 13.44px;
   }
 
   .navigation__item {

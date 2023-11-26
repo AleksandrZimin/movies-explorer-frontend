@@ -1,149 +1,154 @@
 .register {
-   height: 100%;
-   padding: 70px 0;
-   margin: 0 auto;
-   box-sizing: border-box;
+  height: 100%;
+  padding: 70px 0;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .register__container {
-   width: 396px;
-   text-align: left;
+  width: 396px;
+  text-align: left;
 }
 
 .register__logo {
-   margin-bottom: 40px;
-   transition: all 250ms ease-out;
+  margin-bottom: 40px;
+  transition: all 250ms ease-out;
 }
 
 .register__logo:hover {
-   opacity: 0.8;
+  opacity: 0.8;
 }
 
 .register__title {
-   margin: 0;
-   margin-bottom: 40px;
-   color: #FFF;
-   font-size: 24px;
-   font-weight: 500;
+  margin: 0;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .register__form {
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-   justify-content: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 
 .register__label {
-   color: #8B8B8B;
-   font-size: 10px;
-   margin-bottom: 10px;
+  color: #8b8b8b;
+  font-size: 10px;
+  margin-bottom: 10px;
 }
 
 .register__input {
-   width: 100%;
-   height: 46px;
-   margin-bottom: 20px;
-   padding: 15px; 
-   border-radius: 8px;
-   background: #2F2F2F;
-   border: none;
-   color: #FFF;
-   font-family: 'Inter', ‘Arial’, sans-serif;
-   box-sizing: border-box;
-   font-size: 13px;
-   font-weight: 500;
+  width: 100%;
+  height: 46px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #2f2f2f;
+  border: none;
+  color: #fff;
+  font-family: "Inter", ‘Arial’, sans-serif;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 500;
 }
 
-.register__input:last-of-type {
-   margin-bottom: 0;
+.register__input_error {
+  color: #ee3465;
+  /* outline: 1px solid #ee3465; */
 }
 
 .register__button {
-   width: 100%;
-   height: 45px;
-   margin-top: 91px;
-   border-radius: 3px;
-   background: #4285F4;
-   border: none;
-   cursor: pointer;
-   color: #FFF;
-   text-align: center;
-   font-family: 'Inter', ‘Arial’, sans-serif;
-   font-size: 14px;
-   font-weight: 500;
-   transition: all 250ms ease-out;
+  width: 100%;
+  height: 45px;
+  margin-top: 91px;
+  border-radius: 3px;
+  background: #4285f4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", ‘Arial’, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 250ms ease-out;
 }
 
 .register__button:hover {
-   opacity: .8;
+  opacity: 0.8;
+}
+
+.register__button:disabled {
+  color: #C2C2C2;
+  background: #F8F8F8;
 }
 
 .register__text {
-   margin: 0;
-   margin-top: 16px;
+  margin: 0;
+  margin-top: 16px;
 
-   color: #8B8B8B;
+  color: #8b8b8b;
 
-   text-align: center;
-   font-size: 14px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .register__link {
-   margin-left: 6px;
-   color: #4285F4;
-   cursor: pointer;
-   text-align: center;
-   font-size: 14px;
-   text-decoration: none;
-   transition: all 250ms ease-out;
+  margin-left: 6px;
+  color: #4285f4;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 250ms ease-out;
 }
 
 .register__link:hover {
-   opacity: .7;
+  opacity: 0.7;
 }
 
 .register__error {
-   margin: 0;
-   margin-top: 10px;
-   color: #EE3465;
-   font-size: 10px;
+  margin: 0;
+  color: #ee3465;
+  font-size: 10px;
 }
 
 .register__error_hidden {
-   display: none;
+  display: none;
 }
 
 @media screen and (max-width: 540px) {
-   .register {
-      padding: 56px 30px 30px 30px;
-      margin: 0;
-      box-sizing: border-box;
-   }
+  .register {
+    padding: 56px 30px 30px 30px;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-   .register__container {
-      width: 100%;
-      text-align: center;
-   }
+  .register__container {
+    width: 100%;
+    text-align: center;
+  }
 
-   .register__logo {
-      margin-bottom: 50px;
-   }
+  .register__logo {
+    margin-bottom: 50px;
+  }
 
-   .register__title {
-      margin-bottom: 80px;
-   }
+  .register__title {
+    margin-bottom: 80px;
+  }
 
-   .register__button {
-      margin-top: 267px;
-   }
+  .register__button {
+    margin-top: 267px;
+  }
 
-   .register__text {
-      margin-top: 14px;
-      font-size: 12px;
-   }
+  .register__text {
+    margin-top: 14px;
+    font-size: 12px;
+  }
 
-   .register__link {
-      font-size: 12px;
-   }
+  .register__link {
+    font-size: 12px;
+  }
 }

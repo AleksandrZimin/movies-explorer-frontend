@@ -1,52 +1,52 @@
 .burgerbutton {
-   width: 44px;
-   height: 44px;
-   display: none;
-   cursor: pointer;
-   background-color: #202020;
-   background-image: url(../../images/icon__COLOR_icon-main-min.png);
-   border: none;
-   transition: all 50ms ease-out;
+  width: 44px;
+  height: 44px;
+  display: none;
+  cursor: pointer;
+  background-color: #202020;
+  background-image: url(../../images/icon__COLOR_icon-main-min.png);
+  border: none;
+  transition: all 50ms ease-out;
 }
 
-.burgerbutton_active  {
-   width: 22px;
-   height: 22px;
-   position: absolute;
-   top: 29px;
-   right: 29px;
-   background-color: #202020;
-   background-image: url(../../images/Group.png) !important ;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   cursor: pointer;
-   transition: all 150ms ease-out;
-   border: none;
-   padding: 0;
-   z-index: 4;
+.burgerbutton_active {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 29px;
+  right: 29px;
+  background-color: #202020;
+  background-image: url(../../images/Group.png) !important ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+  border: none;
+  padding: 0;
+  z-index: 4;
 }
 
 .burgerbutton:hover {
-   opacity: .7;
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 800px) {
-   .burgerbutton {
-      display: block;
-   }
+  .burgerbutton {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 540px) {
-   .burgerbutton {
-      width: 40px;
-      height: 43px;
-   }
+  .burgerbutton {
+    width: 40px;
+    height: 43px;
+  }
 
-   .burgerbutton_active {
-      width: 22px;
-      height: 22px;
-      top: 20px;
-      right: 20px;
-   }
+  .burgerbutton_active {
+    width: 22px;
+    height: 22px;
+    top: 20px;
+    right: 20px;
+  }
 }
